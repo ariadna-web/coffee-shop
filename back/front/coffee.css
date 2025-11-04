@@ -252,14 +252,17 @@ color: var(--3);
         display: flex;
         top: 0; 
         justify-content: space-between;
-        gap: 12px;
+        align-items: center;
+        gap: 2px;
+        flex-wrap: nowrap;
         position: fixed;
         background-color: var(--7);
         width: 100%;
         }
     .navbar a{
-        padding: 2px;
+        padding: 2px 4px;
         font-size: 12px;
+        white-space: nowrap;
         color: var(--1);
         text-decoration: none;
         }

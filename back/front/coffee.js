@@ -3,7 +3,7 @@ const opinionesSection= document.getElementById("opiniones-lista");
 
 if(opinionForm){
 async function cargarOpiniones() {
-    const res= await fetch("http://localhost:3000/api/opiniones");
+    const res= await fetch("/api/opiniones");
     const opiniones= await res.json();
 
     opinionesSection.innerHTML= opiniones
@@ -25,7 +25,7 @@ opinionForm.addEventListener("submit", async(e) =>{
         nombre: document.getElementById("nombre").value, 
         comentario: document.getElementById("comentario").value,
     }
-    await fetch("http://localhost:3000/api/opiniones", {
+    await fetch("/api/opiniones", {
         method: "POST",
         headers:{"content-type": "application/json"},
         body:JSON.stringify(nuevaOpinion),
